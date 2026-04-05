@@ -1,1 +1,25 @@
 
+Q1.You have a web app hosted on Azure App Service.
+
+You want to:
+	•	Deploy a new version of your app
+	•	Test it before going live
+	•	Switch to the new version without downtime
+You have a web app hosted on Azure App Service.
+
+Options:
+
+A) Auto-scale
+B) Deployment slots
+C) Azure Monitor
+D) Backup and Restore
+
+Answer - B) Deployment slots
+
+Deployment slots in Azure App Service let you:
+	•	Deploy new versions to a staging slot
+	•	Test safely without affecting production
+	•	Swap slots → zero downtime release 
+
+
+Q2. 
