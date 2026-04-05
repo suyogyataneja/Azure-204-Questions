@@ -40,3 +40,43 @@ D) Always On
 
 Answer - B)
 ---------------------------------------------------------------------------
+
+Q3. You need to securely store:
+	•	Database connection strings
+	•	API keys
+
+For your App Service, without exposing them in code.
+
+👉 Where should you store them? (Choose TWO)
+
+⸻
+
+Options:
+
+A) Hardcode in appsettings.json
+B) Azure Key Vault
+C) Application Settings in App Service
+D) Store in controller
+
+Answer - B and C
+-------------------------------------------------------------------------------
+
+Q4. You want to enable authentication for your App Service using Azure Active Directory without modifying your application code.
+
+👉 What should you use?
+
+⸻
+
+Options:
+
+A) Implement custom JWT authentication
+B) Azure AD B2C SDK
+C) App Service Authentication (Easy Auth)
+D) API Management
+
+Answer - C)
+
+App Service Authentication (Easy Auth) lets you:
+	•	Enable login (Azure AD, Google, etc.)
+	•	Without writing any code
+	•	Handled at the platform level (before request hits your app)
