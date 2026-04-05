@@ -21,5 +21,22 @@ Deployment slots in Azure App Service let you:
 	•	Test safely without affecting production
 	•	Swap slots → zero downtime release 
 
+--------------------------------------------------------------------------
+Q2. Your App Service is experiencing high traffic during peak hours.
 
-Q2. 
+You want the app to:
+	•	Automatically add more instances when CPU usage exceeds 70%
+	•	Reduce instances when traffic drops
+What should you configure?
+
+⸻
+
+Options:
+
+A) Deployment slots
+B) Auto-scale rules
+C) Manual scaling
+D) Always On
+
+Answer - B)
+---------------------------------------------------------------------------
