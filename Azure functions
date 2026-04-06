@@ -80,3 +80,17 @@ App Service Authentication (Easy Auth) lets you:
 	•	Enable login (Azure AD, Google, etc.)
 	•	Without writing any code
 	•	Handled at the platform level (before request hits your app)
+Q5.Your web app occasionally becomes slow due to cold starts when it hasn’t received traffic for a while.
+
+👉 What should you enable to prevent this?
+
+⸻
+
+Options:
+
+A) Auto-scale
+B) Deployment slots
+C) Always On
+D) Backup
+
+Answer: C)
