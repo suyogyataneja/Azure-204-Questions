@@ -1,0 +1,88 @@
+ Azure App Service Deployment (CLI Commands)
+
+🔹 1. Create Resource Group
+
+az group create \
+  --name cligroup \
+  --location australiaeast
+
+
+👉 Creates a logical container for all Azure resources
+
+
+
+🔹 2. Create App Service Plan (Free Tier)
+
+
+az appservice plan create \
+  --name azsdappservplan \
+  --resource-group cligroup \
+  --location australiaeast \
+  --sku F1
+
+👉 Defines the compute (server) for your web app
+
+
+🔹 3. Create Web App
+
+az webapp create \
+  --name azsjdwebapp1212121 \
+  --resource-group cligroup \
+  --plan azsdappservplan \
+  --runtime "DOTNET:8"
+
+👉 Creates the actual web application
+
+🔹 4. Configure Deployment Source (GitHub)
+
+az webapp deployment source config \
+  --name azsjdwebapp1212121 \
+  --resource-group cligroup \
+  --repo-url https://github.com/Azure-Samples/app-service-web-dotnet-get-started.git \
+  --branch master \
+  --manual-integration
+
+👉 Connects GitHub repository to Azure Web App
+
+
+🔹 5. Trigger Deployment (Manual Sync)
+
+az webapp deployment source sync \
+  --name azsjdwebapp1212121 \
+  --resource-group cligroup
+
+👉 Pulls code from GitHub and deploys it
+
+
+🔹 6. View Web App in Browser
+
+https://azsjdwebapp1212121.azurewebsites.net
+
+👉 Opens deployed application
+
+🔹 7. Restart Web App
+
+az webapp restart \
+  --name azsjdwebapp1212121 \
+  --resource-group cligroup
+
+👉 Applies configuration changes and restarts app
+
+🔹 8. View Logs (Log Stream)
+az webapp log tail \
+  --name azsjdwebapp1212121 \
+  --resource-group cligroup
+
+👉 Streams live logs from the application
+
+🔹 9. Delete Resource Group (Cleanup)
+
+az group delete \
+  --name cligroup \
+  --yes \
+  --no-wait
+
+👉 Deletes all resources to stop billing
+
+
+
