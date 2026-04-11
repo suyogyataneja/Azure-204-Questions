@@ -94,3 +94,10 @@ C) Always On
 D) Backup
 
 Answer: C)
+
+Which trigger allows an Azure Function to run when an HTTP request is received?
+
+A) Timer Trigger
+B) Blob Trigger
+C) HTTP Trigger
+D) Queue Trigger
