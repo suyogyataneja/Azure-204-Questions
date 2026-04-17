@@ -1,1 +1,7 @@
+Explore Azure Cosmos DB
+Key benefits
+Azure Cosmos DB, a fully managed NoSQL database, offers several key benefits, including low latency, elastic scalability, defined data consistency, and high availability.
+It supports global distribution, allowing databases to be placed close to users worldwide for reduced latency. With its multi-master replication protocol, every region supports
+writes and reads, ensuring unlimited scalability and 99.999% availability globally. 
 
+Azure Cosmos DB enables near real-time reads and writes across chosen regions, with automatic handling of data replication and high availability even in the event of regional outages.
