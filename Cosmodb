@@ -1,3 +1,11 @@
 Azure Cosmos DB is a fully managed, globally distributed, multi-model NoSQL database service designed for low latency, high availability, 
 and elastic scalability. It supports various data models (documents, key-value, graph, columnar) and provides turnkey global distribution 
 with 99.999% availability SLAs. It is heavily optimized for modern AI applications, offering integrated vector search and No-ETL analytical capabilities.
+
+
+Important concepts:
+
+- Non relational database
+- Document/item in container
+- Partition key -- to equally distribute data in the container.
+                -- Data distribute in logical partitions
