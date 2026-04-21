@@ -1,0 +1,21 @@
+//Sending Message to Azure Service Bus Queue
+
+//CREATE  A NEW CONOSLE APP 
+
+string connectionString = ""
+
+string queuename ="ourfirstqueue"
+
+
+// create a service bus client
+ServiceBusClient serviceBusClient = new ServiceBusClient(connectionString)
+
+// create a service bus sender
+ServiceBusSender serviceBusSender = serviceBusClient.CreateSender(queuename)
+
+// send message using service bus seneder 
+
+ServiceBusMessage serviceBusMessage = new ServiceBusMessage("Hello from c# and Visual Studio....");
+await serviceBusSender.SendMessageAsyn(serviceBusMessage);
+
+Console.WriteLine("Message has been sent")
