@@ -1,0 +1,7 @@
+// here we will receive message from Azure Service Bus in Visual Studio
+// We will use - Service Bus Client  and ServiceBusReceiver.
+
+
+// Create a console app in Visual Studio
+
+// ServiceBusReciever 
