@@ -3,5 +3,21 @@
 
 
 // Create a console app in Visual Studio
+// Get the nuget packages for Azure.Messaging.ServiceBus
 
-// ServiceBusReciever 
+string connectionString = ""
+
+//queuename from where we will read the message
+string queuename ="ourfirstqueue"
+
+
+// create a service bus client
+ServiceBusClient serviceBusClient = new ServiceBusClient(connectionString)
+
+// create a service bus Reciever 
+ServiceBusReceiver serviceBusReceiver = serviceBusClient.CreateReceiver(queuename)
+
+// Receive the message
+
+ServiceBusMessage msg = await serviceBusReceiver.ReceuveMessageAsync();
+Console.WriteLine("Message has been recieved")
