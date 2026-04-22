@@ -5,3 +5,97 @@ It supports global distribution, allowing databases to be placed close to users 
 writes and reads, ensuring unlimited scalability and 99.999% availability globally. 
 
 Azure Cosmos DB enables near real-time reads and writes across chosen regions, with automatic handling of data replication and high availability even in the event of regional outages.
+Core Concepts (VERY IMPORTANT for exam)
+
+1. 🌍 Global Distribution
+	•	You can replicate data across multiple Azure regions
+	•	Supports multi-master (multi-write) and single-write setups
+	•	Helps with:
+	•	High availability
+	•	Disaster recovery
+
+⸻
+
+2. ⚡ Throughput (RU/s – Request Units)
+	•	Everything costs RU/s (Request Units per second)
+	•	Reads, writes, queries → all consume RU
+
+👉 Example:
+	•	Simple read → ~1 RU
+	•	Complex query → higher RU
+
+📌 Exam tip:
+	•	If app is slow → increase RU/s
+	•	If cost is high → optimize queries / indexing
+
+⸻
+
+3. 🧩 Partitioning (SUPER IMPORTANT)
+	•	Data is split using a Partition Key
+
+👉 Good partition key:
+	•	High cardinality (many unique values)
+	•	Even distribution
+
+👉 Bad partition key:
+	•	Causes hot partition (exam favorite ⚠️)
+
+📌 Example:
+	•	Good: userId
+	•	Bad: country = Australia
+
+⸻
+
+4. 📦 Consistency Levels (Classic exam question)
+
+5 levels (from strongest → weakest):
+	1.	Strong
+	2.	Bounded Staleness
+	3.	Session ⭐ (default, MOST IMPORTANT)
+	4.	Consistent Prefix
+	5.	Eventual
+
+📌 Trade-off:
+	•	Strong consistency = lower performance
+	•	Eventual = fastest but less accurate
+
+⸻
+
+5. 🔄 APIs Supported
+
+Cosmos DB supports multiple models:
+	•	Core (SQL API) ⭐ most used
+	•	MongoDB API
+	•	Cassandra API
+	•	Table API
+	•	Gremlin (graph)
+
+⸻
+
+6. 🧾 Indexing
+	•	Automatic indexing by default
+	•	Helps fast queries
+
+📌 You can:
+	•	Include/exclude fields
+	•	Optimize RU consumption
+
+⸻
+
+7. 🔁 Change Feed
+	•	Tracks changes in real-time
+	•	Used for:
+	•	Event-driven apps
+	•	Azure Functions triggers
+
+⸻
+
+🔥 Common AZ-204 Questions Topics
+
+You WILL see questions on:
+	•	✔️ Partition key selection
+	•	✔️ RU/s optimization
+	•	✔️ Consistency levels
+	•	✔️ Global distribution
+	•	✔️ Change Feed + Azure Functions
+	•	✔️ Hot partition problem
