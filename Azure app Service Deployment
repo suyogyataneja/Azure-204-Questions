@@ -85,6 +85,7 @@ az group delete \
 👉 Deletes all resources to stop billing
 
 You can use Powershell or CLI to run commands.
+powershell and ClI have different commands.
 
 
 
