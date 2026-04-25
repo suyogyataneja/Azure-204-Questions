@@ -3,19 +3,22 @@ var connectionString ="AccessEndpoint=https:.//"
 var cosmoclient = new CosmosClient(connectionString)
 
 //ordersdb is the cosmpdb and corder is the partition key 
-var cosmoContainer = cosmoclient.GetContainer("ordersdb", "corder")
+var cosmosContainer = cosmoclient.GetContainer("ordersdb", "corder")
 
 
 //lets read item i.e ORDER PLACED
-
+var orderdetails = await cosmosContainer.ReadItemAsync<Order>("documentid comes here", new PartitionKey("------actual partition key----"));
 
 //lets specific condition to check if etag matches 
-
+var itemOptions = new ItemRequestOptions() { IfMatchEtag = orderdetails.ETag};
 
 //lets update the order status=shipped
+orderdetails.Resource.OrderStatus = "shipped";
 
 
 //and lets update the record again in the Cosmos DB  and add condition - Update only if eTag value in DB matches with the provided value
+var response = await cosmosContainer.UpsertItemAsync(orderdetails.Resource, new PartitionKey("-----new partition key----"), itemOptions));
+
 
 Console.Writeline("Concurrency control .....");
 
@@ -27,5 +30,8 @@ public string Id{get; set;}
 
 [JsonProperty(PropertyName = "username")]
 public string UserName{get; set;}
+
+[JsonProperty(PropertyName = "orderstatus")]
+public string OrderStatus{get; set;}
 
 }
