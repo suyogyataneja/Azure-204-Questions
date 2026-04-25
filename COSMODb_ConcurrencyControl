@@ -4,3 +4,28 @@ var cosmoclient = new CosmosClient(connectionString)
 
 //ordersdb is the cosmpdb and corder is the partition key 
 var cosmoContainer = cosmoclient.GetContainer("ordersdb", "corder")
+
+
+//lets read item i.e ORDER PLACED
+
+
+//lets specific condition to check if etag matches 
+
+
+//lets update the order status=shipped
+
+
+//and lets update the record again in the Cosmos DB  and add condition - Update only if eTag value in DB matches with the provided value
+
+Console.Writeline("Concurrency control .....");
+
+
+class Order
+{
+[JsonProperty(PropertyName = "id")]
+public string Id{get; set;}
+
+[JsonProperty(PropertyName = "username")]
+public string UserName{get; set;}
+
+}
