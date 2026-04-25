@@ -1,1 +1,6 @@
+var connectionString ="AccessEndpoint=https:.//"
 
+var cosmoclient = new CosmosClient(connectionString)
+
+//ordersdb is the cosmpdb and corder is the partition key 
+var cosmoContainer = cosmoclient.GetContainer("ordersdb", "corder")
