@@ -1,1 +1,4 @@
 for azure auth our app isnt expected to be hosted in Azure
+
+Identity Provider, Identity Service, Tenant in AD, OAuth2, JWT Token ,Authorization Server, App Registration
+
