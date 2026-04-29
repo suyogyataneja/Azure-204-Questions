@@ -1,1 +1,2 @@
 
+Azure Cache for Redis is a fully managed, in-memory data store based on open-source Redis, designed to boost application performance through low-latency caching. It provides high-throughput, secure, and scalable caching for database query results, session states, and content. It supports multiple tiers (Basic, Standard, Premium) with capacities up to 1.2 TB and is used to reduce database load.
