@@ -101,3 +101,6 @@ A) Timer Trigger
 B) Blob Trigger
 C) HTTP Trigger
 D) Queue Trigger
+
+
+Nk cold start - Consumption
