@@ -5,3 +5,23 @@ az group create
 az appservice plan create
 az webapp create
 az webapp deployment source config
+
+
+# how do you connect REDIS
+
+
+using StackExchange.Redis;
+
+var connection = ConnectionMultiplexer.Connect(
+    "myredis123.redis.cache.windows.net:6380,password=<key>,ssl=True,abortConnect=False"
+);
+
+var db = connection.GetDatabase();
+
+// SET
+db.StringSet("user:1", "Laura");
+
+// GET
+var value = db.StringGet("user:1");
+
+Console.WriteLine(value);
