@@ -25,3 +25,13 @@ db.StringSet("user:1", "Laura");
 var value = db.StringGet("user:1");
 
 Console.WriteLine(value);
+
+ 1. Messaging (MOST IMPORTANT)
+
+🔥 Golden rule
+	•	Azure Event Grid
+👉 “Something happened” (Blob upload, trigger)
+	•	Azure Event Hubs
+👉 “Millions of events / telemetry”
+	•	Azure Service Bus
+👉 “Reliable, FIFO, DLQ”
