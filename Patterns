@@ -35,3 +35,5 @@ Console.WriteLine(value);
 👉 “Millions of events / telemetry”
 	•	Azure Service Bus
 👉 “Reliable, FIFO, DLQ”
+
+learn about multiple truggers.
