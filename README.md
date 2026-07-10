@@ -8,4 +8,4 @@ Azure Cache Redis
 Managed Identities : MI in azure lets  Azure resources authenticate to other Azure services without storing secrets/passwords.
 
 1. System Assigned Managed Identity: Identity is tied directly to one Azure resource.
-2. User Assigned Managed Identity : A standalone AZURE Identity resource. You create it separately and attach it to multiple resources. Also lets say if  VM/ App service is deleted --the identity still exists. 
+2. User Assigned Managed Identity : A standalone AZURE Identity resource. You create it separately and attach it to multiple resources. Also lets say 
