@@ -5,6 +5,12 @@ Service Bus,
 Cosmos Db
 Azure functions
 Azure Cache Redis
+Service Bus, 
+Cosmos Db
+Azure functions
+Azure Cache Redis
+
+
 Managed Identities : MI in azure lets  Azure resources authenticate to other Azure services without storing secrets/passwords.
 
 1. System Assigned Managed Identity: Identity is tied directly to one Azure resource.
